@@ -35,7 +35,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "127.0.0.1",  # Localhost (for development)
-    "aakashmahajan.com",  # Fixed missing comma
+    "http://localhost:3000",
+    "aakashmahajan.com",  
     "gay-rebekah-yws-5c937b5f.koyeb.app",
 ]
 
