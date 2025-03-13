@@ -20,6 +20,6 @@ from url.views import simple_ui
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('url.urls')),
+    path('url/', include('url.urls')),
     path('', simple_ui)
 ]
