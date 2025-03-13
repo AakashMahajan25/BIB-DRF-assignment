@@ -35,12 +35,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "127.0.0.1",  # Localhost (for development)
-    "http://localhost:3000",
+    "localhost:3000",
     "aakashmahajan.com",  
     "gay-rebekah-yws-5c937b5f.koyeb.app",
 ]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://aakashmahajan.com",
+    "https://gay-rebekah-yws-5c937b5f.koyeb.app",
+]
 
 # Application definition
 
@@ -59,15 +63,16 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'urlshortener.urls'
 
