@@ -144,8 +144,9 @@ STATIC_URL = 'staticfiles/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Add this line
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ensures collectstatic has a target directory
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Your project's static files
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ensures collectstatic has a target directory
